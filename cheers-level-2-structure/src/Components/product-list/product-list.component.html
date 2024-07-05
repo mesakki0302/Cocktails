@@ -1,0 +1,33 @@
+<!-- product-list.component.html -->
+<!-- <div *ngFor="let product of productlist" class="container">
+    <li>{{ product.id }}</li>
+    <li>{{ product.name }}</li>
+    <li>{{product.isAlcoholic}}</li>
+    <li>{{product.imageUrl}}</li>
+    <li>{{product.instructions}}</li>
+    <li>{{product.ingredients}}</li>
+</div> -->
+<div class="container">  
+  <div class="filters">
+      <h3>Filters</h3>
+      <h5>Cocktail name</h5><input type="search" class="form-control" style="border-color: none; height:5vh; margin-left:130px;display: flex; flex-wrap: wrap;margin-top:-5%;" [(ngModel)]="searchtext">
+    </div>
+    <br>
+    <div class="row">
+      <div *ngFor="let product of productList | filter:searchtext" class="product-card">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <div class="product-info">
+         <h3><a (click)="viewDetail(product.id)">{{ product.name }}</a></h3>
+          <button [ngClass]="{'Alcoholic':product.isAlcoholic, 'Non-Alcoholic':product.isAlcoholic}">
+            {{ product.isAlcoholic ? 'Alcoholic' : 'Non-Alcoholic' }}
+          </button>
+          <p>{{ product.ingredients.join('|')}}</p>
+          <div class="favourite">
+            <span [id]="'star-'+product.id" (click)="toggleFavorite(product.id)" [ngClass]="{'active':favorites.includes(product.id)}" class="icon-star">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

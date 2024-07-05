@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(216, 220, 221);
+}
+
+.filters {
+  background-color: rgb(207, 213, 214);
+  width: 98%;
+  height: 15vh;
+  margin-left: 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border: 1px solid rgb(203, 207, 207);
+  padding: 10px;
+  margin: 10px;
+  width: calc(50% - 20px); /* Two products per line with spacing */
+  height: 200px; /* Decrease the height */
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative; /* Ensure positioning for the star icon */
+}
+
+.product-card img {
+  width: 40%; /* Increase width of the image */
+  height: 120%; /* Maintain the height */
+  margin-right: 5px; /* Optional: if you still need some margin */
+  margin-left:-10px;
+  margin-top:-8px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allowing the info section to take up remaining space */
+}
+
+.product-info h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.product-info button {
+  width: fit-content;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  margin-left:-2px;
+  margin-bottom: 5px;
+
+}
+
+.Alcoholic {
+  background-color: rgba(150, 155, 209, 0.918);
+}
+
+.NonAlcoholic {
+  background-color: lightgreen;
+}
+
+.product-info p {
+  margin: 0;
+}
+
+.favourite {
+  position: absolute;
+  top: 10px;
+  left: 330px;
+}
+
+.icon-star {
+  color: grey;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.icon-star.active {
+  color: gold;
+}

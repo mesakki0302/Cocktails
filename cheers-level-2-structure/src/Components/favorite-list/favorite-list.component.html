@@ -1,0 +1,18 @@
+<div class="container">
+    <h3>Favorite Cocktails</h3>
+    <div class="row">
+      <div *ngFor="let product of favoriteProducts" class="product-card" (click)="viewDetail(product.id)">
+            <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <button [ngClass]="{'Alcoholic': product.isAlcoholic, 'Non-Alcoholic-alcoholic': !product.isAlcoholic}">
+            {{ product.isAlcoholic ? 'Alcoholic' : 'Non-Alcoholic' }}
+          </button>
+          <p>{{ product.ingredients }}</p>
+          <div class="favourite">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

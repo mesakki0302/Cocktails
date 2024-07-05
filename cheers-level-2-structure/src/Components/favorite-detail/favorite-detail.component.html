@@ -1,0 +1,25 @@
+<div class="back-button">
+  <button (click)="goBack()">
+    <i class="fa fa-arrow-up"></i> Back
+  </button>
+</div>
+<div *ngIf="product" class="product-card" >
+    <img [src]="product.imageUrl" alt="{{ product.name }}">
+    <div class="product-info">
+    <h1>{{product.name}}</h1>    
+    <strong>Type:</strong><button [ngClass]="{'Alcoholic': product.isAlcoholic, 'Non-Alcoholic-alcoholic': !product.isAlcoholic}">
+        {{ product.isAlcoholic ? 'Alcoholic' : 'Non-Alcoholic' }}
+      </button>
+    <br>  
+    <strong class="ingredient">Ingredients:</strong>
+    <ul>
+      <li *ngFor="let ingredient of product.ingredients">{{ ingredient }}</li>
+    </ul>
+    <strong>Instructions:</strong> <p>{{ product.instructions }}</p>
+    <div class="favourite">
+      <span [id]="'star-'+product.id" (click)="toggleFavorite(product.id)" [ngClass]="{'active':favorites.includes(product.id)}" class="icon-star">
+      </span>
+    </div>
+    </div>
+  </div>
+  

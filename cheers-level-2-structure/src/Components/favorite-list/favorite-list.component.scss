@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(216, 220, 221);
+  }
+
+  .filters{
+    background-color: rgb(207, 213, 214);
+    width:98%;
+    height:15vh;
+    margin-left: 5px;
+    margin-top: 30px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .product-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: calc(50% - 40px); /* Two products per line with spacing */
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .product-card img {
+    width:50%; /* Set width to 100% of the container */
+    height: 100%; /* Set height to 100% of the container */
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    margin-right: 10px; /* Optional: if you still need some margin */
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allowing the info section to take up remaining space */
+  }
+  
+  .product-info h3 {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  
+  .product-info button {
+    width: fit-content;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  
+  .Alcoholic {
+    background-color: rgba(150, 155, 209, 0.918);
+  }
+  
+  .NonAlcoholic {
+    background-color: lightgreen;
+  }
+  
+  .product-info p {
+    margin: 0;
+  }
+
+  .icon-star{
+    color: grey;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 120px;
+    margin-top:-450px;
+  }
+
+  .icon-star.active{
+    color:gold;
+  }
+  
