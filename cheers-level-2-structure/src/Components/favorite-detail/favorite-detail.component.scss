@@ -1,4 +1,3 @@
-
 .product-card {
     display:flex;
     width:150%;
@@ -7,20 +6,20 @@
     margin-top: 30px;
     margin-left: -30%;
     overflow: hidden;
-    position: relative; /* Ensure positioning for the star icon */
+    position: relative;
   }
   
   .product-card img {
-    width:30%; /* Set width to 100% of the container */
-    height:60vh; /* Set height to 100% of the container */
-    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
-    margin-right: 10px; /* Optional: if you still need some margin */
+    width:30%;
+    height:60vh;
+    object-fit: cover;
+    margin-right: 10px;
   }
 
   .product-info p {
     margin-left: 330px;
-    white-space: normal; /* Allow text to wrap */
-    overflow-wrap: break-word; /* Break long words to fit in the box */
+    white-space: normal;
+    overflow-wrap: break-word; 
     word-wrap: break-word;
   }
 
@@ -81,5 +80,13 @@
   }
   
 
+  .back-button{
+    top:40px;
+    transform: translate(-30%,-30%);
+    position:relative;
+    border-radius: 10px;
+  }
 
-  
+  .back-button:hover{
+    cursor: pointer;
+  }
